@@ -1,32 +1,37 @@
 package com.company.meli_play.Exercicio_Funcionario;
 
-public class Funcionario {
+import java.math.BigDecimal;
+
+public abstract class Funcionario {
 
     private String nome;
     private String cpf;
-    private double salario;
-    private double horasTrabalhadas;
+    private BigDecimal salario;
+    private int horasTrabalhadas;
+    private Departamento departamento;
+    private int horasDescanso;
 
-    public Funcionario(String nome, String cpf, double salario, double horasTrabalhadas) {
+    public Funcionario(String nome, String cpf, BigDecimal salario, int horasTrabalhadas, Departamento departamento, int horasDescanso) {
         this.nome = nome;
         this.cpf = cpf;
         this.salario = salario;
         this.horasTrabalhadas = horasTrabalhadas;
+        this.departamento = departamento;
+        this.horasDescanso = horasDescanso;
     }
 
-    public double getBonificacao() {
-        return this.salario * 0.05;
+    public Funcionario(String nome, String cpf, BigDecimal salario, Departamento departamento, int horasDescanso) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.salario = salario;
+        this.horasTrabalhadas = horasTrabalhadas;
+        this.departamento = departamento;
+        this.horasDescanso = horasDescanso;
     }
 
-    public String getNome() {
-        return nome;
-    }
+    public abstract BigDecimal pagarSalario();
 
-    public String getCpf() {
-        return cpf;
-    }
-
-    public double getSalario() {
+    public BigDecimal getSalario() {
         return salario;
     }
 }

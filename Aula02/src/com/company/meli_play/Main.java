@@ -1,5 +1,9 @@
 package com.company.meli_play;
 
+import com.company.meli_play.Exercicio_Funcionario.*;
+
+import java.math.BigDecimal;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -36,5 +40,38 @@ public class Main {
         System.out.println(StringUtil_v2.indexOfN("John | Paul | George | Ringo", '|', 2));
         System.out.println(StringUtil_v2.indexOfTrim("John | Paul | George | Ringo", '|', 2));
 
+        System.out.println("\n -------- Exercício Aula 2 - Funcionário --------");
+
+        Funcionario analista = new Analista("Carlos",
+                "47576528866",
+                BigDecimal.valueOf(3200.00),
+                40,
+                Departamento.MERCADO_PAGO,
+                0);
+
+        Funcionario tecnico = new Analista("Sérgio",
+                "47576528866",
+                BigDecimal.valueOf(4000.00),
+                40,
+                Departamento.IT,
+                4);
+
+        Funcionario gerente = new Gerente("Santana",
+                "47576528866",
+                BigDecimal.valueOf(6000.00),
+                36,
+                Departamento.PRODUTO,
+                4);
+
+        Funcionario diretor = new Diretor("Santos",
+                "47576528866",
+                BigDecimal.valueOf(15000.00),
+                Departamento.RECURSOS_HUMANOS,
+                4);
+
+        System.out.println("Salário analista : " + analista.pagarSalario());
+        System.out.println("Salário técnico : "  + tecnico.pagarSalario());
+        System.out.println("Salário gerente : "  + gerente.pagarSalario());
+        System.out.println("Salário diretor : "  + diretor.pagarSalario());
     }
 }
