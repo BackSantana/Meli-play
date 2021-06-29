@@ -31,5 +31,10 @@ public class Main {
         Data data = new Data("2021-06-27");
         System.out.println(data.verificaData());
         System.out.println(data.addDay());
+
+        System.out.println("\n -------- Exercício Aula 2 - StringUtils --------");
+        System.out.println(StringUtil_v2.indexOfN("John | Paul | George | Ringo", '|', 2));
+        System.out.println(StringUtil_v2.indexOfTrim("John | Paul | George | Ringo", '|', 2));
+
     }
 }
