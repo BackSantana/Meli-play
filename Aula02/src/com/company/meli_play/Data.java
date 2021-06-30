@@ -22,7 +22,7 @@ public class Data {
         this.data = data;
     }
 
-    public String verificaData(){
+    public String verificaData() {
         LocalDate localDate = LocalDate.parse(this.data);
         LocalDate localDateAtual = LocalDate.now();
 
@@ -32,9 +32,9 @@ public class Data {
             return "Data correta";
     }
 
-    public String addDay( ){
+    public String addDay() {
         LocalDate localDate = LocalDate.parse(this.data);
         LocalDate date = localDate.plusDays(1);
-      return "Um dia adicionado -> " + String.valueOf(date);
+        return "Um dia adicionado -> " + String.valueOf(date);
     }
 }

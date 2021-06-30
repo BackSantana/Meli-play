@@ -28,8 +28,8 @@ public class Main {
 
         System.out.println("\n -------- Exercício Aula 2 - Fração --------");
         Fracao fracao = new Fracao();
-        fracao.soma(1,2,1);
-        fracao.multiplicacao(1,2,1);
+        fracao.soma(1, 2, 1);
+        fracao.multiplicacao(1, 2, 1);
 
         System.out.println("\n -------- Exercício Aula 2 - Data --------");
         Data data = new Data("2021-06-27");
@@ -70,8 +70,8 @@ public class Main {
                 4);
 
         System.out.println("Salário analista : " + analista.pagarSalario());
-        System.out.println("Salário técnico : "  + tecnico.pagarSalario());
-        System.out.println("Salário gerente : "  + gerente.pagarSalario());
-        System.out.println("Salário diretor : "  + diretor.pagarSalario());
+        System.out.println("Salário técnico : " + tecnico.pagarSalario());
+        System.out.println("Salário gerente : " + gerente.pagarSalario());
+        System.out.println("Salário diretor : " + diretor.pagarSalario());
     }
 }

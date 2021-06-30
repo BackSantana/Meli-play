@@ -10,7 +10,7 @@ public class Analista extends Funcionario implements IBonificacao {
 
     @Override
     public BigDecimal getBonificacao() {
-        return getSalario().multiply( new BigDecimal("0.08"));
+        return getSalario().multiply(new BigDecimal("0.08"));
     }
 
     @Override

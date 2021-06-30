@@ -12,56 +12,56 @@ package com.company.meli_play;
      */
 public class StringUtil_v2 {
 
-    public static String rpad(String s, char c, int n){
+    public static String rpad(String s, char c, int n) {
         StringBuilder string = new StringBuilder(s);
-        for(int i =0; i <= n; i++){
-                string.append(c);
+        for (int i = 0; i <= n; i++) {
+            string.append(c);
         }
         return string.toString();
     }
 
-    public static String ltrim(String s){
-       return s.replaceAll("^\\s+", "");
-    }
-
-    public static String Rtrim(String s){
+    public static String ltrim(String s) {
         return s.replaceAll("^\\s+", "");
     }
 
-    public static String Trim(String s){
+    public static String Rtrim(String s) {
+        return s.replaceAll("^\\s+", "");
+    }
+
+    public static String Trim(String s) {
         return s.strip();
     }
 
-    public static int indexOfN(String s, char c, int n){
+    public static int indexOfN(String s, char c, int n) {
         int index = 0;
-        int contador =0;
+        int contador = 0;
         String aux = String.valueOf(c);
-        for(int i = 0; i <= s.length() -1; i++){
-            if(!s.contains(aux))
+        for (int i = 0; i <= s.length() - 1; i++) {
+            if (!s.contains(aux))
                 return 0;
-            if(aux.equals(String.valueOf(s.charAt(i)))){
+            if (aux.equals(String.valueOf(s.charAt(i)))) {
                 contador++;
             }
-            if(contador == n){
+            if (contador == n) {
                 return index = s.indexOf(aux, i);
             }
         }
         return 0;
     }
 
-    public static int indexOfTrim(String s, char c, int n){
+    public static int indexOfTrim(String s, char c, int n) {
         int index = 0;
-        int contador =0;
-        s = s.replaceAll(" ","");
+        int contador = 0;
+        s = s.replaceAll(" ", "");
 
         String aux = String.valueOf(c);
-        for(int i = 0; i <= s.length() -1; i++){
-            if(!s.contains(aux))
+        for (int i = 0; i <= s.length() - 1; i++) {
+            if (!s.contains(aux))
                 return 0;
-            if(aux.equals(String.valueOf(s.charAt(i)))){
+            if (aux.equals(String.valueOf(s.charAt(i)))) {
                 contador++;
             }
-            if(contador == n){
+            if (contador == n) {
                 return index = s.indexOf(aux, i);
             }
         }

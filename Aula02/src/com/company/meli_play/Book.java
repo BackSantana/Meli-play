@@ -20,11 +20,11 @@ public class Book {
         this.autor = autor;
     }
 
-    public Book(){
+    public Book() {
 
     }
 
-    public Book emprestimo(Book book){
+    public Book emprestimo(Book book) {
         book.setDisponibilidade('S');
         return book;
     }

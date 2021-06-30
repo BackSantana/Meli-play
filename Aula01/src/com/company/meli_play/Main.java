@@ -1,7 +1,7 @@
 package com.company.meli_play;
 
 public class Main {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         AulaExercicio2 aula02 = new AulaExercicio2();
         AulaExercicio1 aula01 = new AulaExercicio1();
 
@@ -19,9 +19,9 @@ public class Main {
         System.out.println("\n ------------------ Exercício 1 - Primeiros números primos ----------------");
         aula01.numerosPrimos(5);
 
-        int[] result = aula01.numerosNaturais(5, 2,3);
+        int[] result = aula01.numerosNaturais(5, 2, 3);
 
-        Integer[] array = {1,4,5,6,70,90,80,36,100,78};
+        Integer[] array = {1, 4, 5, 6, 70, 90, 80, 36, 100, 78};
         System.out.println("\n ------------------ Exercício 2 - Ordenação e reverso do vetor ------------------");
         System.out.println("\n Exercício 2 - Ordenação");
         aula02.ordenaArray(array);

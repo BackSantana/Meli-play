@@ -11,25 +11,25 @@ public class Counter {
     public Counter() {
     }
 
-    public Counter(int valor){
+    public Counter(int valor) {
         this.valor = valor;
     }
 
-    public Counter(Counter counter){
+    public Counter(Counter counter) {
         this.valor = counter.getValor();
     }
 
-    public int aumentar(){
+    public int aumentar() {
         this.valor++;
         return this.valor;
     }
 
-    public int aumentar(int valor){
+    public int aumentar(int valor) {
         this.valor += valor;
         return this.valor;
     }
 
-    public int diminuir(){
+    public int diminuir() {
         this.valor--;
         return this.valor;
     }

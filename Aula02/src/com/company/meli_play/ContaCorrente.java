@@ -11,30 +11,30 @@ public class ContaCorrente {
     private String nomeTitular;
     private double saldo;
 
-    public ContaCorrente (ContaCorrente contaCorrente) {
+    public ContaCorrente(ContaCorrente contaCorrente) {
         this.nomeTitular = contaCorrente.getNomeTitular();
-     }
+    }
 
     public ContaCorrente(String nomeTitular) {
         this.nomeTitular = nomeTitular;
     }
 
-    public void depositar(double valor){
+    public void depositar(double valor) {
         saldo += valor;
     }
 
-    public void saque(double valor){
-        if(saldo <= valor)
+    public void saque(double valor) {
+        if (saldo <= valor)
             System.out.println("Valor inválido");
         else
             saldo -= valor;
     }
 
-    public void devolucao(double valor){
+    public void devolucao(double valor) {
 
     }
 
-    public void tranferir(double valor, ContaCorrente contaCorrente){
+    public void tranferir(double valor, ContaCorrente contaCorrente) {
         contaCorrente.depositar(valor);
     }
 
