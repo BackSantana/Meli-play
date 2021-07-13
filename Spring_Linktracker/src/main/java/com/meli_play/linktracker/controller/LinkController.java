@@ -7,20 +7,13 @@ import com.meli_play.linktracker.dto.MetricasDto;
 import com.meli_play.linktracker.model.Link;
 import com.meli_play.linktracker.service.LinkService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
+ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.view.RedirectView;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
-import java.net.URI;
 
-
+// Esqueci de fazer o invalidador de url
 @RestController
 @RequestMapping("/api/link")
 public class LinkController {
@@ -49,7 +42,7 @@ public class LinkController {
 
     @GetMapping("/metrics/{id}")
     public ResponseEntity<MetricasDto> sumLink(@PathVariable long id){
-        long metricas = linkService.getStatisticas(id);
+        long metricas = linkService.getEstatisticas(id);
         return ResponseEntity.ok(new MetricasDto(metricas));
     }
 }

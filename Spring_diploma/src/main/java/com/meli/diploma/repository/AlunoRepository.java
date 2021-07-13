@@ -1,13 +1,14 @@
-package com.meli.diploma.dao;
+package com.meli.diploma.repository;
 
 import com.meli.diploma.model.Aluno;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.OptionalDouble;
 
-public class AlunoDao {
+@Repository
+public class AlunoRepository {
     private static List<Aluno> alunos = new ArrayList<>();
 
     public List<Aluno> getAlunos(){

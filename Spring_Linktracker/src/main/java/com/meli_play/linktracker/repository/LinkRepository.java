@@ -23,6 +23,7 @@ public class LinkRepository {
         return links.values().stream().filter(link -> link.getSenha().equals(senha)).findFirst().orElse(null);
     }
 
+    // Precisa fazer uma validação, pode ser que retorne null.
     public long selectStatistica(Long id){
         return selectID(id).getChamadas();
     }

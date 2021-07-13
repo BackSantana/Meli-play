@@ -25,7 +25,7 @@ public class LinkService {
         return aux;
     }
 
-    public long getStatisticas(Long id){
+    public long getEstatisticas(Long id){
         return linkRepository.selectStatistica(id);
     }
 
