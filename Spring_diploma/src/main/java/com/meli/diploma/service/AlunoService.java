@@ -9,13 +9,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class AlunoService {
-    static long index = 1l;
 
     @Autowired
     AlunoRepository alunoRepository;
 
-    public AlunoDTO obterDiploma(AlunoForm alunoForm){
-        Aluno aluno = AlunoFormToAluno(alunoForm);
+    public AlunoDTO obterDiploma(Aluno aluno){
         aluno.setMedia(media(aluno));
         AlunoDTO alunoDTO = new AlunoDTO(aluno, mensagemMedia(aluno.getMedia()));
 
@@ -33,9 +31,7 @@ public class AlunoService {
         return mensagem;
     }
 
-    public static Aluno AlunoFormToAluno(AlunoForm alunoForm){
-        return new Aluno(index++, alunoForm.getNome(), alunoForm.getDisciplinas());
-    }
+
 
     public Aluno getAluno(long id){
         return alunoRepository.getAluno(id);

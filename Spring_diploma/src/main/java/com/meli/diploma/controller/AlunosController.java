@@ -21,7 +21,8 @@ public class AlunosController {
 
     @PostMapping("/analyNotes")
     public ResponseEntity<AlunoDTO> postAluno(@RequestBody @Valid AlunoForm alunoForm, UriComponentsBuilder uriBuilder){
-        AlunoDTO alunoDTO = alunoService.obterDiploma(alunoForm);
+        Aluno aluno = AlunoForm.AlunoFormToAluno(alunoForm);
+        AlunoDTO alunoDTO = alunoService.obterDiploma(aluno);
         URI uri = uriBuilder.path("/api/{id}").buildAndExpand(alunoDTO.getId()).toUri();
         return ResponseEntity.created(uri).body(alunoDTO);
     }
