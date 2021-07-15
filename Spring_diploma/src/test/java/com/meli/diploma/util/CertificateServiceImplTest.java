@@ -31,14 +31,14 @@ public class CertificateServiceImplTest {
 
         AlunoDTO alunoDTO = alunoService.obterDiploma(aluno);
 
-        Mockito.verify(alunoRepository).add(aluno);
+        Mockito.verify(alunoRepository).save(aluno);
      }
 
      @Test
     public void deveProcurarUmAluno(){
          Aluno aluno = carregarAluno();
 
-         Mockito.when(alunoRepository.getAluno(1)).thenReturn(aluno);
+         Mockito.when(alunoRepository.findById(1l)).thenReturn(java.util.Optional.ofNullable(aluno));
          Aluno alunoRetorno = alunoService.getAluno(1);
          Assertions.assertEquals(aluno, alunoRetorno);
      }

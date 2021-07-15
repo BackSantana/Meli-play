@@ -17,7 +17,7 @@ public class AlunoService {
         aluno.setMedia(media(aluno));
         AlunoDTO alunoDTO = new AlunoDTO(aluno, mensagemMedia(aluno.getMedia()));
 
-        alunoRepository.add(aluno);
+        alunoRepository.save(aluno);
         return alunoDTO;
     }
 
@@ -34,6 +34,6 @@ public class AlunoService {
 
 
     public Aluno getAluno(long id){
-        return alunoRepository.getAluno(id);
+        return alunoRepository.findById(id).orElse(null);
     }
 }
