@@ -6,12 +6,14 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Entity
-@NoArgsConstructor
 @Data
-@Table(name = "dentists")
-public class Dentist extends Client{
+@NoArgsConstructor
+@Table(name = "turn_status")
+public class TurnStatus {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_dentist")
     private Long id;
+    @Enumerated(EnumType.STRING)
+    private TypeStatus name;
+    private String description;
 }

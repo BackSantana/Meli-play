@@ -1,5 +1,6 @@
 package com.meli.demo.entitys;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -17,5 +18,6 @@ public class Diary {
     private LocalDateTime startTime;
     private LocalDateTime endingTime;
     @ManyToOne(optional = false)
+    @JsonIgnoreProperties(value = {"applications", "hibernateLazyInitializer"})
     private Dentist dentist;
 }
