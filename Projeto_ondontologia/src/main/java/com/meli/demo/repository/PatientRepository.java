@@ -15,4 +15,4 @@ public interface PatientRepository extends JpaRepository<Patient, Long> {
      * @return
      */
     public List<Patient> findPatientsByTurnsDay(String date);
-}
+ }
